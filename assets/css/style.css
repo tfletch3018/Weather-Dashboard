@@ -43,3 +43,28 @@ transition-duration: 3s;
 height:auto;
 width:65px;
 }
+
+button:hover {
+    background-color: var(--blue);
+}
+
+button:focus {
+    outline-color: var(--orchid);
+    border:none;
+}
+
+html {
+    height: 100%;
+}
+
+input {
+    border: 1px solid var(--light);
+    border-radius: 3px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 640px;
+    height: 100%;
+}
