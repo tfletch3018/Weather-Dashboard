@@ -1,7 +1,45 @@
+* {
+    box-sizing:border-box;
+}
+
 :root {
     --orchid:#d9b3ff;
+    --light:#f2e6ff;
+    --dark:#333333;
+    --blue:#0000ff;
+    --violet:#6b00b3;
 }
 
 body {
     background-color: var(--orchid);
+    height: 100%;
+    margin:0;
+}
+
+header {
+color: var(--light);
+margin-top:0;
+text-align:center;
+width:100%;
+height:80px;
+background-color: var(--dark);
+font-size:24px;
+}
+
+header h1 {
+    margin:0;
+    padding-top: 10px;
+}
+
+h1, h3, p, li {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+button {
+background-color: var(--violet);
+border:none;
+border-radius: 3px;
+transition-duration: 3s;
+height:auto;
+width:65px;
 }
