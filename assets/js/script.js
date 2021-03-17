@@ -8,7 +8,7 @@ $(document).ready(function () {
           let clickEvent = $(event.target)[0];
           let location = "";
           if (clickEvent.id === "getTargetCityWeather") {
-            location = $('targetCity').val().trim().toUpperCase();
+            location = $('#targetCity').val().trim().toUpperCase();
           } else if ( clickEvent.className === ("cityList") ) {
             location = clickEvent.innerText;
           }
