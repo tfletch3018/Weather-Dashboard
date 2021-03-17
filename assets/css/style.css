@@ -8,10 +8,10 @@
     --dark:#333333;
     --blue:#0000ff;
     --violet:#6b00b3;
+    --tan:#f9f2ec;
 }
 
 body {
-    background-color: var(--orchid);
     height: 100%;
     margin:0;
 }
@@ -60,6 +60,8 @@ html {
 input {
     border: 1px solid var(--light);
     border-radius: 3px;
+    height: 40px;
+    width: auto;
 }
 
 .container {
@@ -67,4 +69,105 @@ input {
     flex-direction: row;
     max-width: 640px;
     height: 100%;
+}
+
+.row {
+    display: flex;
+    line-height: 50%;
+    margin: 5px 5px 5px 0px;
+}
+
+.row * {
+    margin-right: 5px;
+}
+
+.search {
+    padding: 25px;
+    background-color: var(--tan);
+}
+
+.search h1 {
+    line-height: 25px;
+}
+
+.forecast {
+    border: solid 1px var(--light);
+    margin-top: 25px;
+    margin-left: 5%;
+    min-width: 640px;
+    padding: 12px 15px 15px 15px;
+    height: 40%;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.weather-container h1 {
+margin-top: 25px;
+margin-left: 5%;
+}
+
+.historyItems {
+    margin-top: 20px;
+}
+
+.five-day-card {
+    margin-left: 58.5px;
+    width: 175px;
+    height: auto;
+    border-radius: 5px;
+    color: var(--light);
+    font-size: larger;
+    background-color: var(--blue);
+}
+
+.forecast-container .card-text {
+    margin-bottom: 15px;
+    padding: 10px 30px 5px 10px;
+}
+
+.five-day-card h3 {
+    margin: 5px;
+}
+
+.five-day-card img {
+    margin-left: 10%;
+}
+
+.historyItems:nth-child() {
+    margin-top: 20px;
+}
+img {
+    width: auto;
+    height: auto;
+}
+
+li:first-child {
+    height: 100%;
+    font-size: larger;
+    background-color: var(--light);
+    border: solid 1px var(--tan);
+    border-radius: 6px 6px 0px 0px;
+    padding: 12px 5px 12px 15px;
+    list-style: none;
+}
+li {
+    height: 100%;
+    font-size: larger;
+    background-color: var(--light);
+    border: solid 1px var(--tan);
+    border-radius: 0px 0px 0px 0px;
+    padding: 12px 5px 12px 15px;
+    list-style: none;
+}
+li:last-child {
+    height: 100%;
+    font-size: larger;
+    background-color: var(--light);
+    border: solid 1px var(--tan);
+    border-radius: 0px 0px 6px 6px;
+    padding: 12px 5px 12px 15px;
+    list-style: none;
 }
