@@ -18,59 +18,64 @@
 </head>
 
 <body>
-
-    <header class="header">
-        <h1 class=>Weather Dashboard</h1>
-    </header>
-
+    <nav class="navbar navbar-expand-lg navbar-dar bg-dark" id="header">
+        <span class="navbar-brand mx-auto">Weather Dashboard</span>
+    </nav>
     <div class="container">
-        <div class="search">
-            <div class="row">
-                <h1>Search For a City:</h1>
-            </div>
-            <div class="row">
-                <input type="text" class="searchInput" placeholder="Seattle">
-                <button type="submit" class="searchBtn">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-            </div>
+        <div class="row">
 
-            <div class="historyItems"></div>
-        </div>
-        <div class="weather-container">
-            <div class="forecast">
-                <div class="row">
-                    <h1 class="cityName">City Name</h1>
-                    <h1 class="currentDate"></h1>
-                    <img class="weatherIcon"></img>
-                </div>
-                <div class="row">
-                    <p class="temperature">Temperature:</p>
-                </div>
-                <div class="row">
-                    <p class="humidity">Humidity:</p>
-                </div>
-                <div class="row">
-                    <p class="windSpeed">Wind Speed:</p>
-                </div>
-                <div class="row">
-                    <p class="uvIndex">UV Index:</p>
+            <div class="col-md-3">
+                <div class="card search-section">
+                    <div class="card-body">
+                        <label>Search For a City:</label>
+                        <div class="input-group mb-3">
+
+                            <input id="cityEntered" type="text" class="form-control" placeholder="Seattle">
+                            <div class="input-group-append">
+                                <button id="getEnteredCityWeather" class="btb btn-primary" type="submit">
+                                    <i id="getWeatherIcon" class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="past-searches"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="forecast-container">
-                <h1>5 Day Forecast:</h1>
-                <div class="card-row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title" id="cityName">City</h5>
+                            <ul>
+                                <li><img id="currWeathIcn"></img></li>
+                                <li class="card-text" id="currTemp"></li>
+                                <li class="card-text" id="currHum"></li>
+                                <li class="card-text" id="currWind"></li>
+                                <li class="card-text" id="currUVI"></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="row">
+
+                    <h5 class="card-title" id="fiveDayHeader">5-Day Forecast</h5>
+                </div>
+
+                <div class="row" id="forecast"></div>
             </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <script src="assets/js/script.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>
