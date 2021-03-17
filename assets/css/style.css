@@ -9,6 +9,10 @@
     --blue:#0000ff;
     --violet:#6b00b3;
     --tan:#f9f2ec;
+    --or:#ff751a;
+    --red:#ff0000;
+    --yellow:#ffff33;
+    --green:#00e600;
 }
 #header {
     color: var(--light);
@@ -24,6 +28,10 @@ li {
     padding: 5px 0px;
 }
 
+.container {
+    margin-top: 5px;
+}
+
 .col {
     padding: 2px
 }
@@ -33,30 +41,10 @@ li {
     background-color: var(--tan);
 }
 
-.forecast-card {
-    color: var(--light);
-    background-color: var(--blue);
-    border-radius: 5px;
-    font-size: 12px;
-}
-
 .search-city {
     height: 100%;
 }
 
-.cityList {
-    border: solid;
-    border-width: thin;
-    border-radius: 5px;
-    margin: 5px;
-    padding-left: 2px;
-    background-color: var(--orchid);
-}
-
-.cityList:hover {
-    background-color: var(--blue);
-    color: var(--light);
-}
 #fiveDayHeader {
     margin-left: 10px;
     margin-top: 10px;
@@ -79,7 +67,7 @@ header h1 {
 }
 
 h1, h3, p, li {
-    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Oxygen', sans-serif;
 }
 
 button {
@@ -114,4 +102,23 @@ input {
 .container {
     margin-top: 5px;
 }
+.forecast-card {
+    color: var(--light);
+    background-color: var(--blue);
+    border-radius: 5px;
+    font-size: 12px;
+}
 
+.cityList {
+    background-color: var(--orchid);
+    padding-left: 2px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.cityList:hover {
+    background-color: var(--blue);
+    color: var(--light);
+}

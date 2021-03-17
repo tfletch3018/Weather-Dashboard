@@ -42,7 +42,7 @@ $(document).ready(function () {
          $('targetCity').val("");
       }
   
-      function establishCurrLocation() {
+      function confirmLocation() {
           
           let location = {};
           function success(position) {
@@ -74,11 +74,11 @@ $(document).ready(function () {
           $('#previous').empty();
           
           cityList.forEach ( function (city) {  
-            let cityHistoryNameDiv = $('<div>');      
-            cityHistoryNameDiv.addClass("cityList");         
-            cityHistoryNameDiv.attr("value",city);
-            cityHistoryNameDiv.text(city);
-            $('#previous').append(cityHistoryNameDiv);
+            let previousCities = $('<div>');      
+            previousCities.addClass("cityList");         
+            previousCities.attr("value",city);
+            previousCities.text(city);
+            $('#previous').append(previousCities);
           });      
           
           $('#city-search').val("");
@@ -133,21 +133,20 @@ $(document).ready(function () {
           }).then(function(response3) {
           
               let UviLevel = parseFloat(response3.value);
-              let backgrdColor = 'violet';        
-              if (UviLevel < 3) {backgrdColor = 'green';} 
-                  else if (UviLevel < 6) { backgrdColor = 'yellow';} 
-                  else if (UviLevel < 8) { backgrdColor = 'orange';} 
-                  else if (UviLevel < 11) {backgrdColor = 'red';}     
+              let backGround = 'var(--violet)';        
+              if (UviLevel < 3) {backGround = 'var(--green)';} 
+                  else if (UviLevel < 6) { backGround = 'var(--yellow)';} 
+                  else if (UviLevel < 8) { backGround = 'var(--orange)';} 
+                  else if (UviLevel < 11) {backGround = 'var(--red)';}     
           
               let uviTitle = '<span>UV Index: </span>';
-              let color = uviTitle + `<span style="background-color: ${backgrdColor}; padding: 0 7px 0 7px;">${response3.value}</span>`;
+              let color = uviTitle + `<span style="background-color: ${backGround}; padding: 0 6px 0 6px;">${response3.value}</span>`;
               $('#currUVI').html(color);            
               });
           });
       }
   
       function getForecastWeather(loc) {
-  
           if (typeof loc === "object") {
               city = `lat=${loc.latitude}&lon=${loc.longitude}`;      
           } else {
@@ -175,7 +174,6 @@ $(document).ready(function () {
   
           var currentURL = "https://api.openweathermap.org/data/2.5/onecall?";
           var cityName = city;
-          
           var exclHrlURL = "&exclude=hourly";
           var unitsURL = "&units=imperial";
           var apiIdURL = "&appid=";
@@ -211,11 +209,11 @@ $(document).ready(function () {
   
               let $ul = $('<ul>'); 
               let $iconLi = $('<li>');
-              let $iconI = $('<img>');
               let $weathLi = $('<li>');
               let $tempMaxLi = $('<li>');
               let $tempMinLi = $('<li>');
               let $humLi = $('<li>');
+              let $iconI = $('<img>');
   
               $iconI.attr('src', weatherArr[i].icon);
               $weathLi.text(weatherArr[i].weather);                
@@ -239,5 +237,5 @@ $(document).ready(function () {
         });        
       }
       
-      var location = establishCurrLocation();
+      var location = confirmLocation();
     });
