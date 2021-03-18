@@ -61,7 +61,7 @@ $(document).ready(function () {
           }
         
           if (!navigator.geolocation) {
-            console.log('Geolocation is not supported by your browser');
+            console.log('Geolocation not supported');
           } else {
             navigator.geolocation.getCurrentPosition(success, error);
           }
