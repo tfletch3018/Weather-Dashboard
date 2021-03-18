@@ -54,13 +54,6 @@ body {
     margin:0;
 }
 
-.jumbotron {
-color: var(--light);
-text-align:center;
-background-color: var(--dark);
-font-size:24px;
-}
-
 header h1 {
     margin:0;
     padding-top: 10px;
