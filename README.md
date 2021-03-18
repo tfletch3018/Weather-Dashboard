@@ -39,3 +39,5 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
 
+https://tfletch3018.github.io/Weather-Dashboard/
+https://github.com/tfletch3018/Weather-Dashboard
