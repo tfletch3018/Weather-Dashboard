@@ -41,3 +41,5 @@ You are required to submit BOTH of the following for review:
 
 https://tfletch3018.github.io/Weather-Dashboard/
 https://github.com/tfletch3018/Weather-Dashboard
+
+<img src="screenshot2.png">
