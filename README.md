@@ -39,7 +39,7 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
 
-[View the deployed application](https://tfletch3018.github.ioWeather-Dashboard/)
+[View the deployed application](https://tfletch3018.github.io/Weather-Dashboard/)
 
 [Visit the repo](https://github.com/tfletch3018/Weather-Dashboard)
 
